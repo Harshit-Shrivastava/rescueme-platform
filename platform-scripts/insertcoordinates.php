@@ -1,4 +1,5 @@
 <?php 
+header('Access-Control-Allow-Origin: *');
 include_once('dbconfig.php');
 
 $uuid = $_POST['uuid'];
