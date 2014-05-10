@@ -13,7 +13,16 @@ $res = mysqli_query($conn, $query) or die('Failed to execute Query');
 
 if(mysqli_affected_rows($conn) != 1) {
 	//Failed to insert uuid
-	echo "-1";
-} 
+	$json_ob = array("status" => -1);
+//print_r($json_ob);
+
+
+} else {
+	$json_ob = array("status" => 0);
+}
+
+header('Content-Type: application/json');
+//echo $jss;
+echo json_encode($json_ob);
 
 ?>
