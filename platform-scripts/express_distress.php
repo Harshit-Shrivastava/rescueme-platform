@@ -8,7 +8,7 @@ $long = $_POST['lng'];
 
 
 $conn = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbname) or die('Failed to Connect to Database');
-$query = sprintf("insert into users(uuid, lat, lng) values('%s', %f, %f)", $uuid, $lat, $long);
+$query = sprintf("insert into distress(uuid, lat, lng) values('%s', %f, %f)", $uuid, $lat, $long);
 //echo $query;
 $res = mysqli_query($conn, $query) or die('Failed to execute Query');
 
